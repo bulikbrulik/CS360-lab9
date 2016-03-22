@@ -40,7 +40,7 @@ $scope.decrementUpvotes = function(comment) {
       return $http.put('/comments/' + comment._id + '/downvote')
         .success(function(data){
           console.log("downvote worked");
-          comment.downvotes -= 1;
+          comment.upvotes -= 1;
         });
     };
 
